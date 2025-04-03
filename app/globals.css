@@ -10,15 +10,15 @@
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4;
   }
 
   .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors;
+    @apply px-4 py-2 rounded-md font-medium;
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700;
+    @apply bg-blue-600 text-white hover:bg-blue-700;
   }
 
   .btn-secondary {

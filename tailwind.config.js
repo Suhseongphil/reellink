@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -14,9 +13,9 @@ module.exports = {
       },
       colors: {
         dark: {
-          bg: '#121212',
-          card: '#1E1E1E',
-          text: '#E4E4E7'
+          bg: '#1a1a1a',
+          card: '#2d2d2d',
+          text: '#ffffff'
         }
       }
     },
