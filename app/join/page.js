@@ -27,24 +27,28 @@ export default function Join() {
     setLoading(true)
 
     try {
-      // Supabase Auth로 회원가입
+      // Supabase Auth를 사용하여 회원가입 요청
       const { data: authData, error: authError } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
+        email: formData.email,        // 사용자 이메일
+        password: formData.password,  // 사용자 비밀번호
         options: {
           data: {
-            full_name: formData.full_name
+            full_name: formData.full_name  // 사용자 추가 정보 (이름)
           }
         }
       })
 
+      // 회원가입 중 에러 발생 시 에러 throw
       if (authError) throw authError
 
+      // 회원가입 성공 시 알림 표시 후 로그인 페이지로 이동
       alert('회원가입이 완료되었습니다! 이메일을 확인해주세요.')
       router.push('/login')
     } catch (error) {
+      // 에러 발생 시 에러 메시지 설정
       setError('회원가입에 실패했습니다. ' + error.message)
     } finally {
+      // 성공/실패 여부와 관계없이 로딩 상태 종료
       setLoading(false)
     }
   }
